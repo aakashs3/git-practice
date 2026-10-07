@@ -11,5 +11,10 @@ steps{
 echo 'code build successfull'
 }
 }
+stage('code deploy'){
+steps{
+echo 'code deploy successfull'
+}
+}
 }
 }
