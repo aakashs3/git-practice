@@ -3,6 +3,7 @@ agent any
 stages{
 stage('code pull'){
 steps{
+sh 'rm -rf /var/lib/jenkins/workspace/project-01/*'
 sh 'git clone https://github.com/aakashs3/terraform.git'
 echo 'code pull suceessfull'
 }
