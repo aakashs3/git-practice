@@ -3,6 +3,7 @@ agent any
 stages{
 stage('code pull'){
 steps{
+sh 'https://github.com/aakashs3/terraform.git'
 echo 'code pull suceessfull'
 }
 }
