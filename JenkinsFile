@@ -9,7 +9,7 @@ echo 'code pull suceessfull'
 }
 stage('code build'){
 steps{
-sh 'cd /terraform/'
+sh 'cd terraform'
 sh 'cp vpc vpc.tf'
 echo 'code build successfull'
 }
