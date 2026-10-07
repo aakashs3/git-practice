@@ -3,14 +3,15 @@ agent any
 stages{
 stage('code pull'){
 steps{
+sh 'rm -rf /var/lib/jenkins/workspace/*'
 sh 'git clone https://github.com/aakashs3/terraform.git'
 echo 'code pull suceessfull'
 }
 }
 stage('code build'){
 steps{
-sh 'cd terraform'
-sh 'cp vpc vpc.tf'
+sh '''cd /var/lib/jenkins/workspace/project-01/terraform
+cp vpc vpc.tf'''
 echo 'code build successfull'
 }
 }
