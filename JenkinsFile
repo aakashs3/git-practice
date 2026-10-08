@@ -17,14 +17,16 @@ echo 'code build successfull'
 stage('code init'){
 steps{
 sh '''cd /var/lib/jenkins/workspace/project-01/terraform
-      terraform init'''
+terraform init'''
 echo 'code init successfull'
 }
 }
 stage('code validate'){
 steps{
 sh '''cd /var/lib/jenkins/workspace/project-01/terraform
-      terraform validate'''
+terraform validate'''
 echo 'code validate successfull'
+}
+}
 }
 }
