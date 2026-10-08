@@ -10,7 +10,7 @@ echo 'code pull suceessfull'
 stage('code build'){
 steps{
 sh '''cd /var/lib/jenkins/workspace/project-01/terraform
-cp vpc vpc.tf'''
+cp instance instance.tf'''
 echo 'code build successfull'
 }
 }
