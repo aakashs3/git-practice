@@ -14,10 +14,17 @@ cp instance instance.tf'''
 echo 'code build successfull'
 }
 }
-stage('code deploy'){
+stage('code init'){
 steps{
-echo 'code deploy successfull'
+sh '''cd /var/lib/jenkins/workspace/project-01/terraform
+      terraform init'''
+echo 'code init successfull'
 }
 }
+stage('code validate'){
+steps{
+sh '''cd /var/lib/jenkins/workspace/project-01/terraform
+      terraform validate'''
+echo 'code validate successfull'
 }
 }
